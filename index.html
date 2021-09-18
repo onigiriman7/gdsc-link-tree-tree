@@ -4,22 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $.getJSON('output.json',function(data){
+                data= data.slice(2);
+                console.log(data);
+                
+                $.each(data,function(i,v){
+                    $('ul').append('<li><div class="card"><iframe src="'+ v[3] +'"></iframe><a class="link"></a></li>');
+                    $(".list").append('')
+                });
+            }).error(function(){
+                console.log('error');
+            });
+        });
+    </script>
     <title>GDSC-LinkTreeTree</title>
 </head>
 <body>
     <main>
+        <!-- <a href="https://simranktech.github.io/">
+            Simran Kaur</a>
         <div class="card">
             <iframe src="https://simranktech.github.io/" frameborder="0"></iframe>
-        </div>
+        </div> -->
+        <ul></ul>
     </main>
-    <script>
-        spreadsheetId = "1MBP98iwvkpLFcGsBDV_ipnAsQcd4Y9UQ3F2X1ZDIvHM"
-        fetch(`https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:json`)
-    .then(res => res.text())
-    .then(text => {
-        const json = JSON.parse(text.substr(47).slice(0, -2));
-        console.log(json)
-    })
-    </script>
+   <script>
+
+   </script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+body,html{
+    margin:0;
+    padding: 0%;
+}
+
+main{
+    display: flex;
+}
+.card{
+    width: 45vw; height: 650px;
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+}
+iframe{
+    border-style: none; width: 45vw; height: 600px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+li{
+    margin: 20px;
+}
+.link{
+    height: 40px;
+    background-color:red;
+}
