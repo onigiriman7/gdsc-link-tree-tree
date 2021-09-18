@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(function(){
@@ -13,7 +17,7 @@
                 console.log(data);
                 
                 $.each(data,function(i,v){
-                    $('ul').append('<li><div class="card"><iframe src="'+ v[3] +'"></iframe><a class="link"></a></li>');
+                    $('ul').append('<li><div class="card animate__animated animate__fadeInUp"><iframe src="'+ v[3] +'"></iframe><a href="'+ v[3] +'" class="link">'+ v[1] +'</a></li>');
                     $(".list").append('')
                 });
             }).error(function(){
