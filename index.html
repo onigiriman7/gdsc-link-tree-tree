@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDSC-LinkTreeTree</title>
+</head>
+<body>
+    <main>
+        <div class="card">
+            <iframe src="https://simranktech.github.io/" frameborder="0"></iframe>
+        </div>
+    </main>
+    <script>
+        spreadsheetId = "1MBP98iwvkpLFcGsBDV_ipnAsQcd4Y9UQ3F2X1ZDIvHM"
+        fetch(`https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:json`)
+    .then(res => res.text())
+    .then(text => {
+        const json = JSON.parse(text.substr(47).slice(0, -2));
+        console.log(json)
+    })
+    </script>
+</body>
+</html>
