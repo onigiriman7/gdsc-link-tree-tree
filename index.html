@@ -20,7 +20,7 @@
                 $.each(data, function (i, v) {
                     // $('ul').append('<li><div  class="card " data-aos="fade-right"><iframe src="' + v[3] + '"></iframe><a href="' + v[3] + '"  class="link" >' + v[1] + '</a></li>');
                     $('ul').append(`<li>
-                    <div class="card" data-aos=${i % 2 == 0 ? "fade-right" : "fade-left"}>
+                    <div loading="lazy" class="card" data-aos=${i % 2 == 0 ? "fade-right" : "fade-left"}>
                     <iframe src="${v[3]}"></iframe>
                     <a class="link" href="${v[2]}">${v[1]}</a>
                     </div>
@@ -37,8 +37,8 @@
 
 <body>
     <div class="header">
-        <div class="logo">
-
+        <div class="circular-portrait">
+            <div class="circular-img"></div>
         </div>
         <h1>
             Meet the Community <span style="color:red">❤</span>
