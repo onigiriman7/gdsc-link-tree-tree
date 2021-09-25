@@ -134,4 +134,7 @@ li {
     height: 20rem;
     width: 20rem;
   }
+  .heading {
+    font-size: 1.6rem;
+  }
 }
