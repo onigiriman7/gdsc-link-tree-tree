@@ -3,13 +3,23 @@ body,
 html {
   margin: 0;
   padding: 0%;
+<<<<<<< HEAD
   font-family: 'Open Sans', sans-serif;
 }
 body {
   background: url('../bg.svg');
+=======
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  background: url("../assets/bg.svg");
+>>>>>>> 9c870836065202769f087e836648e23773586116
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  overflow: hidden;
 }
 .ul {
   columns: 2;
@@ -44,6 +54,9 @@ ul {
 
   list-style-type: none;
   /* justify-content: center; */
+}
+li {
+  flex: 33.3%;
 }
 /*wrk*/
 
@@ -84,7 +97,12 @@ ul {
   justify-content: center;
 }
 .logo {
+<<<<<<< HEAD
   background: url('../logo.svg');
+=======
+  z-index: 100;
+  background: url("../assets/logo.svg");
+>>>>>>> 9c870836065202769f087e836648e23773586116
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -93,6 +111,24 @@ ul {
   height: 10rem;
   padding: 1rem;
 }
+
+.circular-portrait {
+  position: relative;
+  width: 40vw;
+  height: 40vw;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.circular-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: url("../assets/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 @media screen and (max-width: 900px) {
   body {
     background-size: cover;
@@ -116,4 +152,18 @@ ul {
     height: auto;
     width: 88%;
   }
+<<<<<<< HEAD
+=======
+  /* * {
+    margin: 0;
+    padding: 0;
+  } */
+  .circular-portrait {
+    height: 20rem;
+    width: 20rem;
+  }
+  .heading {
+    font-size: 1.6rem;
+  }
+>>>>>>> 9c870836065202769f087e836648e23773586116
 }
