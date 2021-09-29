@@ -1,67 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="dsc-sticker.png" />
-    <link rel="stylesheet" href="css/index.css" />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(function () {
-        $.getJSON('output.json', function (data) {
-          data = data.slice(2)
-          console.log(data)
-          $.each(data, function (i, v) {
-            // $('ul').append('<li><div  class="card " data-aos="fade-right"><iframe src="' + v[3] + '"></iframe><a href="' + v[3] + '"  class="link" >' + v[1] + '</a></li>');
-            $('ul').append(`<li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="dsc-sticker.png" />
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $.getJSON('output.json', function (data) {
+        data = data.slice(2)
+        console.log(data)
+        $.each(data, function (i, v) {
+          // $('ul').append('<li><div  class="card " data-aos="fade-right"><iframe src="' + v[3] + '"></iframe><a href="' + v[3] + '"  class="link" >' + v[1] + '</a></li>');
+          $('ul').append(`<li>
             <div class="card-holder">
-                    <div loading="lazy" class="card" data-aos=${
-                      i % 2 == 0 ? 'fade-right' : 'fade-left'
-                    }>
+                    <div loading="lazy" class="card" data-aos=${i % 2 == 0 ? 'fade-right' : 'fade-left'
+            }>
                     <iframe src="${v[3]}"></iframe>
-                    <a class="link" href="${v[2]}">${v[1]}</a>
+                    <a class="link" href="${v[3]}">${v[1]}</a>
                     </div>
                     </div>
                     </li>`)
-            $('.list').append('')
-          })
-        }).error(function () {
-          console.log('error')
+          $('.list').append('')
         })
+      }).error(function () {
+        console.log('error')
       })
-    </script>
-    <title>Link-tree of link-trees!</title>
-  </head>
+    })
+  </script>
+  <title>Link-tree of link-trees!</title>
+</head>
 
-  <body>
-    <div class="header">
-      <div class="circular-portrait">
-        <div class="circular-img"></div>
-      </div>
-      <h1 class="heading">
-        Community Hall of Fame
-        <span style="color: red;">❤</span>
-      </h1>
+<body>
+  <div class="header">
+    <div class="circular-portrait">
+      <div class="circular-img"></div>
     </div>
-    <main>
-      <ul></ul>
-    </main>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script>
-      AOS.init()
-    </script>
-  </body>
+    <h1 class="heading">
+      Community Hall of Fame
+      <span style="color: red;">❤</span>
+    </h1>
+  </div>
+  <main>
+    <ul></ul>
+  </main>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    AOS.init()
+  </script>
+</body>
+
 </html>
